@@ -1,0 +1,57 @@
+//- Navigation 
+nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    //- Brand and toggle get grouped for better mobile display 
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#top_nav')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand.page-scroll(href='#page-top') Million Ways to Live
+    //- Collect the nav links, forms, and other content for toggling 
+    #top_nav.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li.hidden
+          a(href='#page-top')
+        if !user
+          li
+            a.page-scroll(href='#services') Goal
+          li
+            a.page-scroll(href='#gydes') Episodes
+          li
+            a.page-scroll(href='#history') Story
+          li
+            a.page-scroll(href='#signup') Sign Up
+          li
+            a.page-scroll(href='#contact') Contact
+        else 
+          form#nav-search.navbar-form.navbar-left(role='search')
+            .form-group
+              input.form-control(type='text', placeholder='Search City')
+          li.dropdown
+            a.dropdown-toggle(href='#', data-toggle='dropdown')
+              | #{user.name.first || user.username}
+              span.caret
+            ul.dropdown-menu(role='menu')
+              li
+                a(href='#') Edit Profile
+              if user.is_gyde
+                li.divider
+                li
+                  a(href='#') Your Gyde Profile
+                li
+                  a(href='#') Your Tours
+              li.divider
+              li
+                a(href='#') Your Trips
+              li.divider
+              li
+                a(href='#') Account
+          li
+            a(href='/signout') Sign Out
+          li.active
+            if user.is_gyde
+              a(hred='#') List A Tour
+            else 
+              a(href='') Become a Gyde

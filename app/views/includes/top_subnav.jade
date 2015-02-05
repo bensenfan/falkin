@@ -1,0 +1,27 @@
+nav.navbar.navbar-subnav.navbar-fixed-top(role='navigation')
+	.container-fluid
+		.navbar-header
+			button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#subnav')
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+		#subnav.collapse.navbar-collapse
+			ul.nav.navbar-nav
+				li
+					a(href="#") Dashboard
+				if user.is_gyde
+					li
+						a(href="#") Gyde Profiles
+					li
+						a(href="#") Tours
+					li
+						a(href="#") Bookings
+				li
+					a(href="#") Trips
+				li
+					a(href="#") Messages
+				li
+					a(href="#") Profile
+				li
+					a(href="#") Account

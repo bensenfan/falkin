@@ -1,0 +1,43 @@
+extends ../layouts/index
+
+block content
+	.row
+		#signup-wrapper
+			.panel.panel-primary
+				.panel-heading
+					h3.panel-title
+						| Sign Up
+				.panel-body
+					p Create Your Account
+					form.signup.form-horizontal(rolw='form')
+						.form-group
+							.col-md-6
+								input#username(type='text', name='username', placeholder='User Name', required='required')
+						.form-group
+							.col-md-6
+								input#email(type='text', name='email', placeholder='Your Email', required='required')
+						.form-group
+							.col-md-6
+								input#password(type='password', name='password', placeholder='Password', required='required')
+						.form-group
+							.col-md-6
+								button#create.btn.btn-primary(type='button') Create
+
+
+	script.
+		$('#create').click(function(e){
+			e.preventDefault();
+			var data = $('form.signup').serializeObject();
+			console.log(data);
+			$.ajax({
+				url: '/user/create',
+				type: 'POST',
+				data: data,
+				success: function(data){
+					window.location.href = '/';
+				},
+				error: function(err){
+					console.log('failed: ', err);
+				}
+			})
+		})

@@ -1,0 +1,34 @@
+extends ../layouts/user
+
+block content
+	section#users-home.row.main-content.bg-light-gray
+		.row.col-md-8.col-md-offset-2.bg-white(style="padding-bottom: 20px;")
+			.col-md-3.pull-left.bg-light-gray.col-xs-12(style="margin-top: 20px;")
+				.col-md-12.bg-white.jumbotron.col-xs-4(style="margin-top: 10px;")
+					i.fa.fa-user(style="font-size: 12em")
+				.col-md-12.col-xs-8.pull-left(style="text-align: center; margin-bottom: 10px")
+					a(href="#") Edit Profile
+					br
+					a(href="#") Public Profile
+			.col-md-9.pull-right.col-xs-12(style="margin-top: 20px;")
+				.col-md-12.bg-light-gray.col-xs-12(style="min-height: 200px; padding: 0px")
+					.bg-gray.header(style="height: 20%; font-size: 1.5em; padding: 10px;")
+						a(href="#") Upcoming Events
+					.bg-white.events.col-md-3.pull-left.col-xs-3(style='height: 130px; margin-top: 10px; margin-left: 10px;')
+					.bg-white.events.col-md-3.pull-left.col-xs-3(style='height: 130px; margin-top: 10px; margin-left: 10px;')
+					.bg-white.events.col-md-3.pull-left.col-xs-3(style='height: 130px; margin-top: 10px; margin-left: 10px;')
+					.add.events.pull-left(style='height: 130px; margin-top: 10px; margin-left: 10px; padding-top: 60px; text-align: center;')
+						a(href='#') See more >>
+			.col-md-9.pull-right.col-xs-12(style="margin-top: 20px;")
+				.col-md-12.bg-light-gray(style="min-height: 200px; padding: 0px")
+					.bg-gray.header(style="height: 50px; font-size: 1.5em; padding: 10px;")
+						a(href="#") Your Gyde Profiles
+					.bg-white.events.col-md-3.pull-left.col-sm-3.col-xs-3(style='height: 130px; margin-top: 10px; margin-left: 10px;')
+					.add.gyde-profile(style='height: 130px; margin-top: 10px; margin-left: 10px; padding-top: 50px; text-align: center;')
+						button.btn.btn-primary Add
+			.col-md-9.pull-right.col-xs-12(style="margin-top: 20px;")
+				.col-md-12.bg-light-gray(style="min-height: 200px; padding: 0px")
+					.bg-gray.header(style="height: 50px; font-size: 1.5em; padding: 10px;")
+						a(href="#") Your Tours
+					.add.tour(style='height: 130px; margin-top: 10px; margin-left: 10px; padding-top: 50px; text-align: center;')
+						button.btn.btn-primary Add

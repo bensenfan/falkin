@@ -1,0 +1,53 @@
+extends ../layouts/index
+
+block content
+	.row
+		#signup-wrapper
+			.panel.panel-primary
+				.panel-heading
+					h3.panel-title
+						| Edit Your Profile: #{user.name.first || user.username}
+				.panel-body
+					p Edit Your Account
+					form.signup.form-horizontal(rolw='form')
+						.form-group
+							.col-md-6
+								label(for='services') Services Available
+								input.services(type='checkbox', name='services' value='lodging')
+								a.text Lodging
+								input.services(type='checkbox', name='services', value='transportation')
+								a.text Transportation
+								input.services(type='checkbox', name='services', value='guide')
+								a.text Guide
+						.form-group
+							.col-md-6
+								label(for='room_type') Room Type
+								button.btn Entire Home
+								button.btn Private Room
+								button.btn Shared Room
+						.form-group
+							.col-md-6
+								label(for='gyde_city') City
+								input#city(type='text', name='gyde_city', required='required' value='#{user.address.city || ""}')
+						.form-group
+							.col-md-6
+								button#save.btn.btn-primary(type='button') Save
+
+
+	script.
+		$('#save').click(function(e){
+			e.preventDefault();
+			var data = $('form.signup').serializeObject();
+			console.log(data);
+			$.ajax({
+				url: '/user/update',
+				type: 'POST',
+				data: data,
+				success: function(data){
+					window.location.href = '/';
+				},
+				error: function(err){
+					console.log('failed: ', err);
+				}
+			})
+		})

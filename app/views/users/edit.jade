@@ -1,0 +1,82 @@
+extends ../layouts/user
+
+block content
+	section
+		.row
+			#signup-wrapper
+				.panel.panel-primary
+					.panel-heading
+						h3.panel-title
+							| Edit Your Profile: #{user.name.first || user.username}
+					.panel-body
+						p Edit Your Account
+						form.signup.form-horizontal(rolw='form')
+							.form-group
+								.col-md-3
+									label(for='[name]first') First Name
+									input#name(type='text', name='name[first]', placeholder='First Name', required='required', value='#{user.name.first || ""}')
+								.col-md-3
+									label(for='[name]last') Last Name
+									input#name(type='text', name='name[last]', placeholder='Last Name', required='required', value='#{user.name.last || ""}')
+							.form-group
+								.col-md-6
+									label(for='gender') Gender
+									select#gender(name='gender')
+										option(value='male' selected=(user.gender === 'male')) Male
+										option(value='female' selected=(user.gender === 'female')) Female
+							.form-group
+								.col-md-6
+									label(for='birthday') Birthday
+									input#birthday(placeholder='birthday selector here' value='#{user.birthday || ""}')
+							.form-group
+								.col-md-6
+									label(for='email') Email
+									input#email(name='email', required='required', placeholder='Your Email', value='#{user.email}')
+							.form-group
+								//- p Your Address
+								.col-md-3
+									lable(for='address[address1]') Street 1
+									input#address_street1(name='address[street1]', required='required', placeholder='Street 1', value='#{user.address.street1 || ""}')
+								.col-md-3
+									lable(for='address[street2]') Street 2
+									input#address_street2(name='address[street2]', required='required', placeholder='Street 2', value='#{user.address.street2 || ""}')
+								.col-md-3
+									lable(for='address[city]') City
+									input#address_city(name='address[city]', required='required', placeholder='City', value='#{user.address.city || ""}')
+								.col-md-3
+									lable(for='address[state]') State
+									input#address_state(name='address[state]', required='required', placeholder='State', value='#{user.address.state || ""}')
+								.col-md-3
+									lable(for='address[post_code]') Post Code
+									input#address_post_code(name='address[post_code]', required='required', placeholder='Post Code', value='#{user.address.post_code || ""}')
+								.col-md-3
+									lable(for='address[country]') Country
+									input#address_country(name='address[country]', required='required', placeholder='Country', value='#{user.address.country || ""}')
+							.form-group
+								.col-md-6
+									label(for='description') Describe Yourself
+									textarea#description(name='description', placeholder='', value='#{user.description}')
+							.form-group
+								.col-md-6
+									button#save.btn.btn-primary(type='button') Save
+
+block js 
+	script(src='/js/index.js')
+
+	script.
+		$('#save').click(function(e){
+			e.preventDefault();
+			var data = $('form.signup').serializeObject();
+			console.log(data);
+			$.ajax({
+				url: '/user/update',
+				type: 'POST',
+				data: data,
+				success: function(data){
+					window.location.href = '/';
+				},
+				error: function(err){
+					console.log('failed: ', err);
+				}
+			})
+		})

@@ -1,0 +1,362 @@
+extends layouts/index
+
+block content
+  //- big header image 
+  header
+    .container
+      .intro-text
+        .intro-lead-in There are a Million Ways to Live
+        .intro-heading Come Find Out with Us
+        a.page-scroll.btn.btn-xl(href='#services') Tell Me More
+        //- .col-lg-12(style="margin-top: 40px")
+        //-   form#top-search(name='search_city', novalidate='novalidate')
+        //-     .row
+        //-       .form-group.col-md-4.col-md-offset-1
+        //-         input#search-city.form-control.input-lg(type='text', placeholder='Search City', required='required', data-validation-required-message='Please enter your name.')
+        //-       #datepicker.form-group.col-md-4.input-daterange.input-group(style='float:left')
+        //-         input#start-date.form-control.input-lg(name='start_date' type='text', placeholder='Start Date', required='required', data-validation-required-message='Please enter your email address.')
+        //-         span.input-group-addon to
+        //-         input#end-date.form-control.input-lg(name='end_date' type='text', placeholder='End Date', required='required', data-validation-required-message='Please enter your phone number.')
+        //-       .form-group.col-md-2
+        //-         button#header-search.btn.btn-lg(type='button') Search
+  //- Services Section 
+  section#services
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.section-heading Our Goal
+          h3.section-subheading.text-muted 
+      .row.text-center
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-map-marker.fa-stack-1x.fa-inverse
+          h4.service-heading Local 
+          p.text-muted
+            | A Gyde is someone who can provide lodging, transportation, and act as a liaison.  In short, someone who can show you a place the way only a local can.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-child.fa-stack-1x.fa-inverse
+          h4.service-heading Original
+          p.text-muted
+            | Learn about the secrets, gems, and unknowns of your next destination from you Gyde! Write your own story, find your own adventure, and do it in the most original way.
+        .col-md-4
+          span.fa-stack.fa-4x
+            i.fa.fa-circle.fa-stack-2x.text-primary
+            i.fa.fa-globe.fa-stack-1x.fa-inverse
+          h4.service-heading Global
+          p.text-muted
+            | Visit any place, start any venture, and never feel like stranger in strange land.  Your Gyde is your portal to this world, a global network individuals waiting to show you the world.
+      .row.text-center(style="margin-top: 40px;")
+        a.page-scroll.btn.btn-xl(href='#signup') Sign Up
+  //- Portfolio Grid Section 
+  section#gydes.bg-light-gray
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.section-heading Episodes
+          h3.section-subheading.text-muted See some of our most recent episodes
+      .row
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal1', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/roundicons.png', alt='')
+          .portfolio-caption
+            h4 Round Icons
+            p.text-muted Graphic Design
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal2', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/startup-framework.png', alt='')
+          .portfolio-caption
+            h4 Startup Framework
+            p.text-muted Website Design
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal3', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/treehouse.png', alt='')
+          .portfolio-caption
+            h4 Treehouse
+            p.text-muted Website Design
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal4', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/golden.png', alt='')
+          .portfolio-caption
+            h4 Golden
+            p.text-muted Website Design
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal5', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/escape.png', alt='')
+          .portfolio-caption
+            h4 Escape
+            p.text-muted Website Design
+        .col-md-4.col-sm-6.portfolio-item
+          a.portfolio-link(href='#portfolioModal6', data-toggle='modal')
+            .portfolio-hover
+              .portfolio-hover-content
+                i.fa.fa-plus.fa-3x
+            img.img-responsive(src='img/portfolio/dreams.png', alt='')
+          .portfolio-caption
+            h4 Dreams
+            p.text-muted Website Design
+      .row.text-center(style="margin-top: 40px;")
+        a#loadmore.btn.btn-xl(href='#') More
+  //- About Section 
+  section#history
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.section-heading Our Story
+          h3.section-subheading.text-muted 
+      .row
+        .col-lg-12
+          ul.timeline
+            li
+              .timeline-image
+                img.img-circle.img-responsive(src='img/about/1.jpg', alt='')
+              .timeline-panel
+                .timeline-heading
+                  h4 2012
+                  h4.subheading An Idea was Born
+                  p.text-muted
+                    | Bensen visited Machu Pichu and hired a local driver. He had a great time there and had an idea. It stayed as an idea for a little while.
+            li.timeline-inverted
+              .timeline-image
+                img.img-circle.img-responsive(src='img/about/2.jpg', alt='')
+              .timeline-panel
+                .timeline-heading
+                  h4 September 2014
+                  h4.subheading Building of a Dream
+                .timeline-body
+                  p.text-muted
+                    | After a 2 years hiatus, Gyde began in Bensen's apartment with an idea, a laptop, and a 2 month break before he is to start his world traveling with his friends Luke, Claire, and their baby JJ. 
+            li.timeline-inverted
+              .timeline-image.page-scroll(href='#signup' style="cursor: pointer;")
+                h4
+                  | Be Part
+                  br
+                  | Of Our
+                  br
+                  | Story!
+  //- Team Section 
+  section#signup.bg-light-gray
+    .container
+      .row
+        .col-lg-12.text-center
+          h2.section-heading WELCOME TO GYDE
+          h3.section-subheading.text-muted
+      .row
+        .col-lg-12
+          form#signUpForm(name='signup', novalidate='novalidate' role='form' autocomplete="off")
+            .row
+              .col-md-4.col-md-offset-4.text-center
+                .form-group
+                  input#username.form-control(type='text', name="username", placeholder='User Name *', required='required', data-validation-required-message='Please choose a user name.')
+                  p.help-block.text-danger
+                .form-group
+                  input#email.form-control(type='email', name="email", placeholder='Email *', required='required', data-validation-required-message='Please enter your email address.' value="")
+                  p.help-block.text-danger
+                .form-group
+                  input#password.form-control(type='password', name="password", placeholder='Password *', required='required', data-validation-required-message='Please enter your phone number.')
+                  p.help-block.text-danger
+              .col-lg-12.text-center
+                #success
+                button#join.btn.btn-xl(type='button') JOIN
+  section#contact
+    .container
+      .row 
+        .col-lg-12.text-center
+          h2.section-heading Contact Us
+          h3.section-subheading.text-muted
+      .row
+        .col-lg-12
+          form#contactForm(name='sentMessage', novalidate='novalidate')
+            .row
+              .col-md-6
+                .form-group
+                  input#name.form-control(type='text', placeholder='Your Name *', required='required', data-validation-required-message='Please enter your name.')
+                  p.help-block.text-danger
+                .form-group
+                  input#email.form-control(type='email', placeholder='Your Email *', required='required', data-validation-required-message='Please enter your email address.')
+                  p.help-block.text-danger
+                .form-group
+                  input#phone.form-control(type='tel', placeholder='Your Phone *', required='required', data-validation-required-message='Please enter your phone number.')
+                  p.help-block.text-danger
+              .col-md-6
+                .form-group
+                  textarea#message.form-control(placeholder='Your Message *', required='required', data-validation-required-message='Please enter a message.')
+                  p.help-block.text-danger
+              .clearfix
+              .col-lg-12.text-center
+                #success
+                button.btn.btn-xl(type='submit') Send Message
+  //- Portfolio Modals 
+  //- Use the modals below to showcase details about your portfolio projects! 
+  //- Portfolio Modal 1 
+  #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              //- Project Details Go Here 
+              h2 Project Name
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive(src='img/portfolio/roundicons-free.png', alt='')
+              p
+                | Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!
+              p
+                strong Want these icons in this portfolio item sample?
+                | You can download 60 of them for free, courtesy of
+                a(href='https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc') RoundIcons.com
+                | , or you can purchase the 1500 icon set
+                a(href='https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc') here
+                | .
+              ul.list-inline
+                li Date: July 2014
+                li Client: Round Icons
+                li Category: Graphic Design
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+  //- Portfolio Modal 2 
+  #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              h2 Project Heading
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive.img-centered(src='img/portfolio/startup-framework-preview.png', alt='')
+              p
+                a(href='http://designmodo.com/startup/?u=787') Startup Framework
+                | is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.
+              p
+                | You can preview Startup Framework
+                a(href='http://designmodo.com/startup/?u=787') here
+                | .
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+  //- Portfolio Modal 3 
+  #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              //- Project Details Go Here 
+              h2 Project Name
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive.img-centered(src='img/portfolio/treehouse-preview.png', alt='')
+              p
+                | Treehouse is a free PSD web template built by
+                a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                | . This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.
+              p
+                | You can download the PSD template in this portfolio sample item at
+                a(href='http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/') FreebiesXpress.com
+                | .
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+  //-Portfolio Modal 4 
+  #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              //-Project Details Go Here 
+              h2 Project Name
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive.img-centered(src='img/portfolio/golden-preview.png', alt='')
+              p
+                | Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by
+                a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                | . Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.
+              p
+                | You can download the PSD template in this portfolio sample item at
+                a(href='http://freebiesxpress.com/gallery/golden-free-one-page-web-template/') FreebiesXpress.com
+                | .
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+  //-Portfolio Modal 5 
+  #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              //-Project Details Go Here 
+              h2 Project Name
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive.img-centered(src='img/portfolio/escape-preview.png', alt='')
+              p
+                | Escape is a free PSD web template built by
+                a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                | . Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.
+              p
+                | You can download the PSD template in this portfolio sample item at
+                a(href='http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/') FreebiesXpress.com
+                | .
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+  //-Portfolio Modal 6 
+  #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-content
+      .close-modal(data-dismiss='modal')
+        .lr
+          .rl
+      .container
+        .row
+          .col-lg-8.col-lg-offset-2
+            .modal-body
+              //-Project Details Go Here 
+              h2 Project Name
+              p.item-intro.text-muted Lorem ipsum dolor sit amet consectetur.
+              img.img-responsive.img-centered(src='img/portfolio/dreams-preview.png', alt='')
+              p
+                | Dreams is a free PSD web template built by
+                a(href='https://www.behance.net/MathavanJaya') Mathavan Jaya
+                | . Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.
+              p
+                | You can download the PSD template in this portfolio sample item at
+                a(href='http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/') FreebiesXpress.com
+                | .
+              button.btn.btn-primary(type='button', data-dismiss='modal')
+                i.fa.fa-times
+                | Close Project
+block js  
+  script(src='js/index.js')

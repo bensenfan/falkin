@@ -1,0 +1,21 @@
+extends ../layouts/gyde
+
+block content
+	section#gyde-profiles.row.main-content.bg-light-gray
+		.row.col-md-8.col-md-offset-2.bg-white(style="padding-bottom: 20px;")
+			.col-md-3.pull-left.bg-light-gray.col-sm-12(style="margin-top: 20px;")
+				.col-md-12.bg-white.jumbotron(style="margin-top: 10px; text-align: center;")
+					i.fa.fa-user(style="font-size: 12em")
+				.col-md-12(style="text-align: center; margin-bottom: 10px")
+					a(href="#") Edit Profile
+					br
+					a(href="#") Public Profile
+			.col-md-9.pull-right.col-sm-12(style="margin-top: 20px;")
+				.col-md-12.bg-light-gray.gydes(style="min-height: 200px; padding: 0px 0px 10px 0px")
+					.bg-gray.header(style="height: 20%; font-size: 1.5em; padding: 10px;")
+						a(href="#") Your Gyde Profiles
+						button.btn.btn-primary.pull-right Add
+					each gyde in gydes
+						.bg-white.gyde.col-md-5.pull-left.col-xs-12(style='height: 130px; margin-top: 10px; margin-left: 30px;' id= 'gyde_#{gyde._id}')
+							i.fa.fa-user
+							.cover(style="height:100%; width: 100%")

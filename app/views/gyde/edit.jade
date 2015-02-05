@@ -1,0 +1,36 @@
+extends ../layouts/gyde
+
+block content
+	section#gyde-edit.row.main-content.bg-light-gray
+		.row.col-md-8.col-md-offset-2.bg-white(style="padding: 20px;")
+			//-.col-md-12.pull-left.col-sm-12(style="margin-top: 20px;")
+			nav#gyde-edit-nav.navbar-subnav(role='navigation')
+				.container-fluid
+					.navbar-header
+						button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#edit-nav')
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+					#edit-nav.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							li
+								a(href="#") Basic
+							li
+								a(href="#") Overview
+							li
+								a(href="#") Availability
+							li
+								a(href="#") Photos
+			form#gyde-edit-container.col-md-12.bg-light-gray(style='min-height: 300px; padding: 20px')
+				#basic
+					.row#services
+						p Services go here
+					.row#city
+						p City selection go here
+					.row#price
+						p Price go here
+				#overview
+				#availability
+				#photos
+						

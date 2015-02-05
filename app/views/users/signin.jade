@@ -1,0 +1,24 @@
+extends ../layouts/index
+
+block content
+  .row
+    #login-wrapper
+      .panel.panel-primary.animated.fadeIn
+        .panel-heading
+          h3.panel-title
+            | Sign In
+        .panel-body
+          p  Login to access your account.
+          form.signin.form-horizontal(action="users/signin", method="post", role="form")
+            .form-group
+              .col-md-12
+                input#email(type='email', name="email", placeholder='Email', autofocus='autofocus', required='required')
+                i.fa.fa-user
+            .form-group
+              .col-md-12
+                input#password(type='password', name="password", placeholder='Password', required='required')
+                i.fa.fa-lock
+                //- a.help-block(href='javascript:void(0)') Forgot Your Password?
+            .form-group
+              .col-md-12
+                button.btn.btn-primary.btn-block(type='submit') Sign in
